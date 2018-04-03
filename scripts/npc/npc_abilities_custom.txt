@@ -1,0 +1,2458 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	//=================================================================================================================
+	// Ability: Storm Bolt Lua
+	//=================================================================================================================
+	"sven_storm_bolt_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityTextureName"			"sven_storm_bolt_lua"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"ScriptFile"					"sven_storm_bolt_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"100 175 250 325"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bolt_speed"			"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bolt_stun_duration"	"2.0"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bolt_aoe"			"255"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"225"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bolt_damage"		"100 175 250 325"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Great Cleave Lua
+	//=================================================================================================================
+	"sven_great_cleave_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"sven_great_cleave_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ScriptFile"					"sven_great_cleave_lua"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_radius"	"300.0"
+			}
+
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"great_cleave_damage"	"20 35 50 65"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Warcry Lua
+	//=================================================================================================================
+	"sven_warcry_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"sven_warcry_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"ScriptFile"					"sven_warcry_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"32.0 26.0 20.0 14.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"25 25 25 25"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_armor"		"4 8 12 16"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_movespeed"	"12"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"warcry_radius"		"900"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"warcry_duration"	"8.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: God's Strength Lua
+	//=================================================================================================================
+	"sven_gods_strength_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"sven_gods_strength_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"ScriptFile"					"sven_gods_strength_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"80.0 80.0 80.0"
+		"AbilityDuration"				"25.0 25.0 25.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gods_strength_damage"		"100 150 200"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_aoe"		"900"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gods_strength_damage_scepter"	"50 75 100"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"gods_strength_duration"	"25.0 25.0 25.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Pudge Meat Hook Lua
+	//=================================================================================================================
+	"pudge_meat_hook_lua"
+	{
+		// General
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"pudge_meat_hook_lua"									// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"ScriptFile"					"pudge_meat_hook_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000 1100 1200 1300"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14 13 12 11"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hook_speed"			"1600.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_width"		"100"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_distance"		"1000 1100 1200 1300"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"500 500 500 500"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"4.0 4.0 4.0 4.0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"hook_followthrough_constant"			"0.65"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"hook_damage"		"90 180 270 360"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Pudge Flesh Heap Lua
+	//=================================================================================================================
+	"pudge_flesh_heap_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"pudge_flesh_heap_lua"
+		"ScriptFile"						"pudge_flesh_heap_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"flesh_heap_magic_resist"		"6 8 10 12"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"flesh_heap_strength_buff_amount"	"1.0 1.5 2 2.5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"flesh_heap_range"		"450"
+			}
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Ability: Pudge Rot Lua
+	//=================================================================================================================
+	"pudge_rot_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"pudge_rot_lua"
+		"ScriptFile"						"pudge_rot_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0 0 0 0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_radius"			"250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"rot_tick"				"0.2"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_slow"				"-20 -22 -24 -26"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"rot_damage"				"35 60 85 110"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Pudge Dismember Lua
+	//=================================================================================================================
+	"pudge_dismember_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"					"pudge_dismember_lua"
+		"ScriptFile"						"pudge_dismember_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"160"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		"AbilityCooldown"				"30.0 30.0 30.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 130 170"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dismember_damage"		"75 125 175"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"strength_damage_scepter"		"1.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_duration"				"3.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creep_duration"			"6.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_rate"				"1.01"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Furion: Sprout Lua
+	//=================================================================================================================
+	"furion_sprout_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"FightRecapLevel"				"1"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"furion_sprout_lua"
+		"ScriptFile"					"furion_sprout_lua"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625 700 775 850"
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+		"AbilityCooldown"				"11 10 9 8"
+		"AbilityManaCost"				"100 120 140 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_range"			"1000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"3 4 5 6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_tooltip"				"625 700 775 850"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"radius"				"150.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Furion: Teleportation Lua
+	//=================================================================================================================
+	"furion_teleportation_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"furion_teleportation_lua"
+		"ScriptFile"					"furion_teleportation_lua"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"3 3 3 3"
+		"AbilityCooldown"				"50 40 30 20"
+		"AbilityManaCost"				"50 50 50 50"
+	}
+
+	//=================================================================================================================
+	// Furion: Force of Nature Lua
+	//=================================================================================================================
+	"furion_force_of_nature_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"furion_force_of_nature_lua"
+		"ScriptFile"					"furion_force_of_nature_lua"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"750"
+		"AbilityCastPoint"				"0.5 0.5 0.5 0.5"
+		"AbilityCooldown"				"37 37 37 37"
+		"AbilityManaCost"				"160 160 160 160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"area_of_effect"		"150 225 300 375"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_treants"			"2 3 4 5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"60 60 60 60"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"treant_health_tooltip"				"550"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"treant_min_dmg_tooltip"				"22"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"treant_max_dmg_tooltip"				"28"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Furion: Wrath of Nature
+	//=================================================================================================================
+	"furion_wrath_of_nature_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"furion_wrath_of_nature_lua"
+		"ScriptFile"					"furion_wrath_of_nature_lua"
+
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.5 0.5 0.5"
+		"AbilityCooldown"				"90 75 60"
+		"AbilityManaCost"				"175 225 275"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_targets"			"16 16 16"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"140 180 225"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_percent_add"	"7"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"jump_delay"			"0.25"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_targets_scepter"	"18 18 18"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_scepter"		"155 210 275"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Ability: Vengefulspirit Magic Missle Lua
+	//=================================================================================================================
+	"vengefulspirit_magic_missile_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"vengefulspirit_magic_missile_lua"
+		"ScriptFile"					"vengefulspirit_magic_missile_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"13 12 11 10"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 120 130 140"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_missile_speed"	"1250"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"magic_missile_stun"	"1.45 1.55 1.65 1.75"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_missile_damage"		"100 175 250 325"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Vengefulspirit Command Aura Lua
+	//=================================================================================================================
+	"vengefulspirit_command_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"vengefulspirit_command_aura_lua"
+		"ScriptFile"					"vengefulspirit_command_aura_lua"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_damage_pct"	"12 20 28 36"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"aura_radius"		"900"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Vengefulspirit Wave of Terror
+	//=================================================================================================================
+	"vengefulspirit_wave_of_terror_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"vengefulspirit_wave_of_terror_lua"
+		"ScriptFile"					"vengefulspirit_wave_of_terror_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1400"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityDuration"				"15"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"40 40 40 40"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"wave_speed"		"2000.0"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wave_width"		"300"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"armor_reduction"	"-3 -4 -5 -6"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"tooltip_duration"	"15"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_aoe"		"500 500 500 500"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"vision_duration"	"3.0 3.0 3.0 3.0"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wave_damage"			"30 50 70 90"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Vengefulspirit Nether Swap Lua
+	//=================================================================================================================
+	"vengefulspirit_nether_swap_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CUSTOM"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"2"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"vengefulspirit_nether_swap_lua"
+		"ScriptFile"					"vengefulspirit_nether_swap_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700 950 1200"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"45.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 150 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"tooltip_range"					"700 950 1200"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"nether_swap_cooldown_scepter"	"10"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: windwing_small_blink_lua
+	//=================================================================================================================
+	"windwing_small_blink_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"			    	"DOTA_ABILITY_BEHAVIOR_POINT"
+        "AbilityCastAnimation"              "ACT_RESET"
+        "MaxLevel"                          "1"
+		"BaseClass"					        "ability_lua"
+		"AbilityTextureName"			    "custom/windwing_small_blink_lua"
+        "ScriptFile"					    "creeps/abilities/windwing_small_blink_lua"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"               "0.2"
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50.0"
+
+	    // Special
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilitySpecial"
+    	{
+    	    "01"
+    		{
+    			"var_type"				"FIELD_INTEGER"
+                "blink_range"	"1100"
+    		}
+         }
+	}
+
+	//=================================================================================================================
+	// Ability: windwing_small_aura_lua
+	//=================================================================================================================
+	"windwing_small_aura_lua"
+	{
+		// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/windwing_small_aura_lua"
+        		"ScriptFile"					"creeps/abilities/windwing_small_aura_lua"
+                "MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"1100"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+                       "var_type"			    "FIELD_INTEGER"
+                       "aura_radius"		    "600"
+                    }
+
+                    "02"
+        			{
+        				"var_type"			    "FIELD_INTEGER"
+        				"bonus_attack_speed"    "25"
+        			}
+
+
+        			"03"
+                    {
+                        "var_type"		        "FIELD_INTEGER"
+                        "bonus_armor"	    	"2"
+                    }
+
+        		}
+	}
+
+	//=================================================================================================================
+
+	// Ability: Lina Laguna Blade Lua
+	//=================================================================================================================
+	"lina_laguna_blade_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"							// Changes dynamically with scepter
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"lina_laguna_blade_lua"
+		"ScriptFile"					"lina_laguna_blade_lua"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.45 0.45 0.45"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"70.0 60.0 50.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"280 420 680"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"450 675 950"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range_scepter"		"600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_delay"				"0.25"
+			}
+		}
+	}
+	//ALL CUSTOM
+	//=================================================================================================================
+	// Ability: creep_bear_big_clap_silence
+    //=================================================================================================================
+    "creep_bear_big_clap_silence_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+                //"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/creep_bear_big_clap_silence_lua"
+                "ScriptFile"					"creeps/abilities/creep_bear_big_clap_silence_lua"
+                "MaxLevel"
+                                "1"
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastPoint"				"0.2"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"15"
+
+                // Cost
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityManaCost"				"50"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "radius"		            "350"
+                    }
+
+                    "02"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "durability"            "3"
+                    }
+                }
+    }
+    //=================================================================================================================
+    // Ability: creep_bear_big_passive_anticreep_lua
+    //=================================================================================================================
+    "creep_bear_big_passive_anticreep_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/creep_bear_big_passive_anticreep_lua"
+                "ScriptFile"					"creeps/abilities/creep_bear_big_passive_anticreep_lua"
+                "MaxLevel"                      "1"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "damage_creep_pct"		            "100"
+                    }
+                }
+    }
+    //=================================================================================================================
+    // Ability: creep_bear_big_aura_lua
+    //=================================================================================================================
+    	"creep_bear_big_aura_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            		"BaseClass"					    "ability_lua"
+            		"AbilityTextureName"			"custom/creep_bear_big_aura_lua"
+            		"ScriptFile"					"creeps/abilities/creep_bear_big_aura_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "aura_radius"		    "700"
+                        }
+
+                        "02"
+            			{
+            				"var_type"			    "FIELD_INTEGER"
+            				"bonus_attack"    "20"
+            			}
+
+            		}
+    	}
+
+    //=================================================================================================================
+    // Ability: creep_bear_small_rage_lua
+    //=================================================================================================================
+        "creep_bear_small_rage_lua"
+        {
+            // General
+                    //-------------------------------------------------------------------------------------------------------------
+                    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+                    "BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/creep_bear_small_rage_lua"
+                    "ScriptFile"					"creeps/abilities/creep_bear_small_rage_lua"
+                    "MaxLevel"                      "1"
+
+                    // Special
+                    //-------------------------------------------------------------------------------------------------------------
+                    "AbilitySpecial"
+                    {
+                        "01"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "rage_duration"		    "5"
+                        }
+
+                        "02"
+                        {
+                            "var_type"			    "FIELD_INTEGER"
+                            "bonus_attack_speed_pct"    "100"
+                        }
+                        "03"
+                        {
+                            "var_type"			    "FIELD_INTEGER"
+                            "bonus_resist_pct"    "65"
+                        }
+
+                    }
+        }
+
+    //=================================================================================================================
+    // Ability: creep_bear_small_aura_lua
+    	//=================================================================================================================
+    	"creep_bear_small_aura_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            		"BaseClass"					    "ability_lua"
+            		"AbilityTextureName"			"custom/creep_bear_small_aura_lua"
+            		"ScriptFile"					"creeps/abilities/creep_bear_small_aura_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "aura_radius"		    "600"
+                        }
+
+                        "02"
+            			{
+            				"var_type"			    "FIELD_INTEGER"
+            				"bonus_movespeed"    "15"
+            			}
+
+
+            			"03"
+                        {
+                            "var_type"		        "FIELD_INTEGER"
+                            "bonus_damage"	    	"25"
+                        }
+
+            		}
+    	}
+
+    	//=================================================================================================================
+ // Ability: creep_bear_small_regen_lua
+    	//=================================================================================================================
+    	"creep_bear_small_regen_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+            		"BaseClass"					    "ability_lua"
+                        "AbilityTextureName"			"custom/creep_bear_small_regen_lua"
+            		"ScriptFile"					"creeps/abilities/creep_bear_small_regen_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "bonus_regen"		    "30"
+                        }
+
+            		}
+    	}
+
+    	//=================================================================================================================
+    // Ability: creep_bear_small_rage_lua
+        //=================================================================================================================
+            "creep_bear_small_rage_lua"
+            {
+                // General
+                        //-------------------------------------------------------------------------------------------------------------
+                        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+                        "BaseClass"					    "ability_lua"
+                        "AbilityTextureName"			"custom/creep_bear_small_rage_lua"
+                        "ScriptFile"					"creeps/abilities/creep_bear_small_rage_lua"
+                        "MaxLevel"                      "1"
+
+                        // Special
+                        //-------------------------------------------------------------------------------------------------------------
+                        "AbilitySpecial"
+                        {
+                            "01"
+                            {
+                               "var_type"			    "FIELD_INTEGER"
+                               "rage_duration"		    "5"
+                            }
+
+                            "02"
+                            {
+                                "var_type"			    "FIELD_INTEGER"
+                                "bonus_attack_speed_pct"    "100"
+                            }
+                            "03"
+                            {
+                                "var_type"			    "FIELD_INTEGER"
+                                "bonus_resist_pct"    "65"
+                            }
+
+                        }
+            }
+
+        //=================================================================================================================
+// Ability: megacreep_warrior_rage_lua
+        //=================================================================================================================
+        "megacreep_warrior_rage_lua"
+        {
+            // General
+                    //-------------------------------------------------------------------------------------------------------------
+                    "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+                    "BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/megacreep_warrior_rage_lua"
+                    "ScriptFile"					"creeps/abilities/megacreep_warrior_rage_lua"
+                    "MaxLevel"                      "1"
+
+                    // Time
+                    //-------------------------------------------------------------------------------------------------------------
+                    "AbilityCooldown"				"20"
+
+                    // Special
+                    //-------------------------------------------------------------------------------------------------------------
+                    "AbilitySpecial"
+                    {
+                        "01"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "rage_duration"		    "4"
+                        }
+
+                        "02"
+                        {
+                            "var_type"			    "FIELD_INTEGER"
+                            "bonus_resist_pct"    "50"
+                        }
+
+                    }
+        }
+
+        //=================================================================================================================
+// Ability: megacreep_warrior_aura_lua
+    	//=================================================================================================================
+    	"megacreep_warrior_aura_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+            		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+            		"BaseClass"					    "ability_lua"
+                        "AbilityTextureName"			"custom/megacreep_warrior_aura_lua"
+            		"ScriptFile"					"creeps/abilities/megacreep_warrior_aura_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "aura_radius"		    "500"
+                        }
+                        "02"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "disarmor_start"		    "4"
+                        }
+                        "03"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "time_tick_minute"		"5"
+                        }
+                        "03"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "disarmor_per_tick"		"1"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
+ // Ability: megacreep_warrior_passive_rage_lua
+    	//=================================================================================================================
+    	"megacreep_warrior_passive_rage_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            		"BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/megacreep_warrior_sparta_lua"
+            		"ScriptFile"					"creeps/abilities/megacreep_warrior_passive_rage_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "duration"		        "6"
+                        }
+                        "02"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "bonus_damage_per_stack"	"5"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
+// Ability: Deus Vult
+	//=================================================================================================================
+	"windwing_small_heal_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/windwing_small_heal_lua"
+        		"ScriptFile"					"creeps/abilities/windwing_small_heal_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"600"
+        		"AbilityCastPoint"				"0.2"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"15"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"heal"	"225"
+        			}
+
+        		}
+	}
+
+	//=================================================================================================================
+// Ability: megacreep_mage_dic_resist_lua
+	//=================================================================================================================
+	"megacreep_mage_dic_resist_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/megacreep_mage_dic_resist_lua"
+        		"ScriptFile"					"creeps/abilities/megacreep_mage_dic_resist_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"600"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"20"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"duration"             	"3.5"
+        			}
+        			"02"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "dic_resist"	        "30"
+                    }
+
+        		}
+	}
+
+	//=================================================================================================================
+// Ability: megacreep_mage_sleep_lua
+	//=================================================================================================================
+	"megacreep_mage_sleep_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/megacreep_mage_sleep_lua"
+        		"ScriptFile"					"creeps/abilities/megacreep_mage_sleep_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"600"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"20"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"duration"             	"3"
+        			}
+
+        		}
+	}
+    //=================================================================================================================
+// Ability: megacreep_mage_magic_damage_lua
+    //=================================================================================================================
+    "megacreep_mage_magic_damage_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/megacreep_mage_magic_damage_lua"
+                "ScriptFile"					"creeps/abilities/megacreep_mage_magic_damage_lua"
+                "MaxLevel"                      "1"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "chance"		            "30"
+                    }
+                    "02"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "bonus_magic_damage"		"45"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: windwing_big_stun_lua
+	//=================================================================================================================
+	"windwing_big_stun_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/windwing_big_stun_lua"
+        		"ScriptFile"					"creeps/abilities/windwing_big_stun_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"600"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"20"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"duration"             	"1"
+        			}
+        			"01"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "damage"             	"300"
+                    }
+
+        		}
+	}
+    //=================================================================================================================
+// Ability: windwing_big_aura_lua
+	//=================================================================================================================
+	"windwing_big_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"BaseClass"					    "ability_lua"
+		"AbilityTextureName"			"custom/windwing_big_aura_lua"
+		"ScriptFile"					"creeps/abilities/windwing_big_aura_lua"
+		"MaxLevel"                      "1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lifesteal" 	    "18"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"	    	"900"
+			}
+
+		}
+	}
+
+	//=================================================================================================================
+// Ability: windwing_big_cyclone_lua
+	//=================================================================================================================
+	"windwing_big_cyclone_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/windwing_big_cyclone_lua"
+        		"ScriptFile"					"creeps/abilities/windwing_big_cyclone_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"1000"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"20"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"duration"             	"3"
+        			}
+
+        		}
+	}
+    //=================================================================================================================
+// Ability: creep_mage_heal_lua
+	//=================================================================================================================
+	"creep_mage_heal_lua"
+	{
+			// General
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        		"BaseClass"					    "ability_lua"
+        		"AbilityTextureName"			"custom/creep_mage_heal_lua"
+        		"ScriptFile"					"creeps/abilities/creep_mage_heal_lua"
+        		"MaxLevel"                      "1"
+
+        		// Casting
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCastRange"				"600"
+        		"AbilityCastPoint"				"0.2"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"15"
+
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"10"
+
+        		// Special
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilitySpecial"
+        		{
+        			"01"
+        			{
+        				"var_type"				"FIELD_INTEGER"
+        				"heal"	"300"
+        			}
+
+        		}
+	}
+    	//=================================================================================================================
+
+// Ability: creep_mage_healing_aura_lua
+    	//=================================================================================================================
+    	"creep_mage_healing_aura_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            		"BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/creep_mage_healing_aura_lua"
+            		"ScriptFile"					"creeps/abilities/creep_mage_healing_aura_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "heal"		            "30"
+                        }
+                        "02"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "radius"	                "1000"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
+// Ability: creep_mage_multi_ball_lua
+    	//=================================================================================================================
+    	"creep_mage_multi_ball_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+            		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+            		"BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/creep_mage_multi_ball_lua"
+            		"ScriptFile"					"creeps/abilities/creep_mage_multi_ball_lua"
+                    "MaxLevel"                      "1"
+
+        		// Time
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityCooldown"				"30"
+
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastRange"				"1000"
+        		// Cost
+        		//-------------------------------------------------------------------------------------------------------------
+        		"AbilityManaCost"				"50"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "damage"		            "30"
+                        }
+                        "02"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "interval"	            "1"
+                        }
+                        "03"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "duration"	            "9"
+                        }
+                        "04"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "radius"	                "1000"
+                        }
+                        "06"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "speed_ball"	            "750"
+                        }
+                        "07"
+                        {
+                            "var_type"			"FIELD_INTEGER"
+                            "ball_width"		"300"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
+// Ability: axe_counter_helix_recode
+    //=================================================================================================================
+    "axe_counter_helix_recode"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/axe_counter_helix_recode_lua"
+                "ScriptFile"					"heroes/axe/axe_counter_helix_recode"
+                "MaxLevel"                      "1"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"5"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "radius"		            "350"
+                    }
+                    "02"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "damage"                "1"
+                    }
+                    "03"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "trigger_chance"                "100"
+                    }
+                    "04"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "cooldown"                "5"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: creep_warrior_alliance_damage_lua
+    //=================================================================================================================
+    "creep_warrior_alliance_damage_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/creep_warrior_alliance_damage_lua"
+                "ScriptFile"					"creeps/abilities/creep_warrior_alliance_damage_lua"
+                "MaxLevel"
+                                "1"
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastPoint"				"0.2"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"15"
+
+                // Cost
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityManaCost"				"50"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "radius"		            "350"
+                    }
+
+                    "02"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "durability"            "3"
+                    }
+                    "03"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "damage_per_unit"       "20"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: creep_warrior_hulk_lua
+    //=================================================================================================================
+    "creep_warrior_hulk_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/creep_warrior_hulk_lua"
+                "ScriptFile"					"creeps/abilities/creep_warrior_hulk_lua"
+                "MaxLevel"
+                                "1"
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastPoint"				"0.2"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"15"
+
+                // Cost
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityManaCost"				"50"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "damage_pct"		            "100"
+                    }
+
+                    "02"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "disarmor"            "5"
+                    }
+                    "03"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "duration"       "5"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: creep_warrior_block_lua
+    //=================================================================================================================
+    "creep_warrior_block_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+                "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/creep_warrior_block_lua"
+                "ScriptFile"					"creeps/abilities/creep_warrior_block_lua"
+                "MaxLevel"
+                                "1"
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastPoint"				"0.2"
+                "AbilityCastRange"				"600"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"15"
+
+                // Cost
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityManaCost"				"50"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "block"		            "40"
+                    }
+                    "02"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "duration"               "5"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: harpy_big_passive_manaregen
+    //=================================================================================================================
+    "harpy_big_passive_manaregen" // Пассивная: +8маны/сек
+    {
+    	// General
+    	//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"						"ability_lua"
+    	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+    	"AbilityTextureName"			"custom/u_texture"
+    	"ScriptFile"					"creeps/abilities/harpy_big_passive_manaregen.lua"
+
+    	"MaxLevel"						"1"
+
+    	// Special
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilitySpecial"
+    	{
+    		"01"
+    		{
+    			"var_type"					"FIELD_FLOAT"
+    			"mana_regen"				"8.0"
+    		}
+    	}
+    }
+// Ability: harpy_big_restore
+    //=================================================================================================================
+    "harpy_big_restore" // Активная: восполняет 350 маны выбранному союзнику, кд 12 секунд
+    {
+    	// General
+    	//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"						"ability_lua"
+    		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+    	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    	"AbilityTextureName"			"custom/u_texture"
+    	"ScriptFile"					"creeps/abilities/harpy_big_restore.lua"
+
+    	"MaxLevel"						"1"
+
+    	// Time
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilityCooldown"				"12.0"
+
+    	// Cost
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilityManaCost"				"150"
+
+    	"AbilityCastRange"				"700"
+
+    	// Special
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilitySpecial"
+    	{
+    		"01"
+    		{
+    			"var_type"					"FIELD_FLOAT"
+    			"mana_restore"				"350"
+    		}
+    	}
+    }
+// Ability: harpy_big_restore
+    //=================================================================================================================
+    "harpy_big_curse" // Активная: накладывает проклятье на врага, от которого враг получает на 25% больше урона, длительность 4 сек, кд 10 сек
+    {
+    	// General
+    	//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"						"ability_lua"
+    	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+    	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+    	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+    	"AbilityTextureName"			"custom/u_texture"
+    	"ScriptFile"					"creeps/abilities/harpy_big_curse.lua"
+
+    	"MaxLevel"						"1"
+
+    	// Time
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilityCooldown"				"10.0"
+
+    	// Cost
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilityManaCost"				"125"
+    	"AbilityCastAnimation"			"0.2"
+    	"AbilityCastRange"				"600"
+    	"AbilityDuration"				"4.0"
+
+    	// Special
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilitySpecial"
+    	{
+    		"01"
+    		{
+    			"var_type"					"FIELD_FLOAT"
+    			"duration"					"4.0"
+    		}
+    		"02"
+    		{
+    			"var_type"					"FIELD_INTEGER"
+    			"increase_damage"			"25"
+    		}
+    	}
+    }
+// Ability: harpy_small_dive
+"harpy_small_dive" // Активная: Пикерование, наносит 300 урона в радиусе 350, дает стан на 1.2 секунды всем, кд 8 секунд. Наносит себе 150 урона
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_lua"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"AbilityTextureName"			"custom/u_texture"
+	"ScriptFile"					"creeps/abilities/harpy_small_dive.lua"
+
+	"MaxLevel"						"1"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"8.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"125"
+	"AbilityCastAnimation"			"0.2"
+	"AbilityCastRange"				"350"
+	"AbilityDuration"				"1.2"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage"					"300"
+		}
+		"02"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"damage_self"				"150"
+		}
+		"03"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"radius"					"350"
+		}
+		"04"
+		{
+			"var_type"					"FIELD_INTEGER"
+			"height"					"665"				// maybe 500?
+		}
+		"05"
+		{
+			"var_type"					"FIELD_FLOAT"
+			"speed"						"100"				// per second
+		}
+	}
+}
+// Ability: Heal Aura Lua
+	//=================================================================================================================
+	"heal_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"BaseClass"					"ability_lua"
+		"AbilityTextureName"				"custom/u_texture"
+		"ScriptFile"					"testForAder/heal_aura_lua"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"regen"	            "5 10 15 20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"aura_radius"		"1000"
+			}
+			"03"
+            {
+                "var_type"			"FIELD_INTEGER"
+                "armor"		        "1 2 3 4"
+            }
+
+		}
+	}
+
+	//=================================================================================================================
+// Ability: destroy_ward
+        //=================================================================================================================
+        "destroy_ward" // Активная: восполняет 350 маны выбранному союзнику, кд 12 секунд
+        {
+        	// General
+        	//-------------------------------------------------------------------------------------------------------------
+        	"BaseClass"						"ability_lua"
+        	"AbilityBehavior"			    "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+        	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+            "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+        	"AbilityTextureName"			"custom/u_texture"
+        	"ScriptFile"					"creeps/abilities/destroy_ward.lua"
+        	"MaxLevel"						"1"
+        	"AbilityCooldown"				"12.0"
+        	"AbilityCastRange"				"700"
+        }
+// Ability: harpy_small_knockback
+//=================================================================================================================
+        "harpy_small_knockback" // Активная: Отбрасывание всех врагов в радиусе 450 от точки, длительность толчка 0.4 секунды(во время толчка стан)
+        {
+        	// General
+        	//-------------------------------------------------------------------------------------------------------------
+        	"BaseClass"						"ability_lua"
+        	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+        	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+        	"AbilityTextureName"			"custom/u_texture"
+        	"ScriptFile"					"creeps/abilities/ghost_big_dash.lua"
+
+        	"MaxLevel"						"1"
+
+        	// Time
+        	//-------------------------------------------------------------------------------------------------------------
+        	"AbilityCooldown"				"16.0"
+
+        	// Cost
+        	//-------------------------------------------------------------------------------------------------------------
+        	"AbilityManaCost"				"150"
+
+        	"AbilityCastRange"				"700"
+
+        	// Special
+        	//-------------------------------------------------------------------------------------------------------------
+        	"AbilitySpecial"
+        	{
+        		"01"
+        		{
+        			"var_type"					"FIELD_FLOAT"
+        			"radius"					"450"
+        		}
+        		"02"
+        		{
+        			"var_type"					"FIELD_INTEGER"
+        			"duration"					"0.4"
+        		}
+        	}
+        }
+//=================================================================================================================
+
+// Ability: true_sight
+	//=================================================================================================================
+	"true_sight"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AOE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"custom/u_texture"
+        "ScriptFile"					"creeps/abilities/true_sight.lua"
+		"MaxLevel"						"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_radius"	        "1000"
+			}
+		}
+	}
+// Ability: npc_aa_creep_salamander_big_fireball_lua
+    //=================================================================================================================
+    "npc_aa_creep_salamander_big_fireball_lua"
+    {
+            // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+                "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+                "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/u_texture"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_big/npc_aa_creep_salamander_big_fireball_lua"
+                "MaxLevel"                      "1"
+
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastRange"				"1000"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"10"
+
+                // Cost
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityManaCost"				"10"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "damage"             	"250"
+                    }
+                    "01"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "speed"             	"1200"
+                    }
+
+                }
+    }
+    //=================================================================================================================
+	// Ability: npc_aa_creep_salamander_big_hp_aura_lua
+	//=================================================================================================================
+	"npc_aa_creep_salamander_big_hp_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/u_texture"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_big/npc_aa_creep_salamander_big_hp_aura_lua"
+         "MaxLevel"                      "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_hp"	        "300"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"		"500"
+			}
+
+		}
+	}
+	//=================================================================================================================
+// Ability: npc_aa_creep_salamander_big_damage_abs_lua
+    //=================================================================================================================
+    "npc_aa_creep_salamander_big_damage_abs_lua" //
+    {
+    	// General
+    	//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"						"ability_lua"
+    	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+    	"AbilityTextureName"			"custom/u_texture"
+    	"ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_big/npc_aa_creep_salamander_big_damage_abs_lua"
+    	"MaxLevel"						"1"
+
+    	// Special
+    	//-------------------------------------------------------------------------------------------------------------
+    	"AbilitySpecial"
+    	{
+    		"01"
+    		{
+    			"var_type"					"FIELD_FLOAT"
+    			"damage_absorb_pct"			"30"
+    		}
+    	}
+    }
+ //=================================================================================================================
+	// Ability: npc_aa_creep_salamander_small_damage_aura_lua
+	//=================================================================================================================
+	"npc_aa_creep_salamander_small_damage_aura_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"BaseClass"					    "ability_lua"
+        "AbilityTextureName"			"custom/u_texture"
+        "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_damage_aura_lua"
+         "MaxLevel"                      "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"900"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus_dmg"	        "35"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"	    	"700"
+			}
+
+		}
+	}
+	//=================================================================================================================
+// Ability: npc_aa_creep_salamander_small_buff_as_lua
+    //=================================================================================================================
+    "npc_aa_creep_salamander_small_buff_as_lua"
+    {
+            // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+                "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/u_texture"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_buff_as_lua"
+                "MaxLevel"                      "1"
+
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastRange"				"1000"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"15"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+                    "01"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "bonus_attack_spd"      "200"
+                    }
+                    "02"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "duration"             	"2.5"
+                    }
+
+                }
+    }
+	//=================================================================================================================
+// Ability: npc_aa_creep_salamander_small_buff_armor_lua
+    //=================================================================================================================
+    "npc_aa_creep_salamander_small_buff_armor_lua"
+    {
+        // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+                //"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/u_texture"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_salamander_small/npc_aa_creep_salamander_small_buff_armor_lua"
+                "MaxLevel"                      "1"
+
+                "AbilityCooldown"				"30"
+                "AbilityCastRange"				"700"
+                "AbilityManaCost"				"50"
+                "AbilitySpecial"
+
+                {
+                    "01"
+                    {
+                       "var_type"			    "FIELD_INTEGER"
+                       "radius"		            "300"
+                    }
+                    "02"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "duration"              "10"
+                    }
+                    "03"
+                    {
+                        "var_type"			    "FIELD_INTEGER"
+                        "bonus_armor"           "5"
+                    }
+                }
+    }
+    //=================================================================================================================
+// Ability: npc_aa_creep_wolf_small_crit_lua
+    //=================================================================================================================
+    "npc_aa_creep_wolf_small_crit_lua"
+    {
+            // General
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+                "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+                "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                "SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+                "BaseClass"					    "ability_lua"
+                "AbilityTextureName"			"custom/u_texture"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_wolf_small/npc_aa_creep_wolf_small_crit_lua"
+                "MaxLevel"                      "1"
+
+                // Casting
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCastRange"				"1000"
+
+                // Time
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilityCooldown"				"10"
+
+                // Special
+                //-------------------------------------------------------------------------------------------------------------
+                "AbilitySpecial"
+                {
+
+                    "01"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "duration"             	"20"
+                    }
+                    "02"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "crit_chance"      "20"
+                    }
+                    "03"
+                    {
+                        "var_type"				"FIELD_INTEGER"
+                        "crit_damage"      "145"
+                    }
+
+                }
+    }
+	//=================================================================================================================
+
+
+
+
+
+
+
+}
+
