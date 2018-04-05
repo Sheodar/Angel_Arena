@@ -10,9 +10,12 @@ function modifier_npc_aa_creep_wolf_small_crit_lua:IsHidden()
 end
 
 --------------------------------------------------------------------------------
+
 function modifier_npc_aa_creep_wolf_small_crit_lua:OnCreated(kv)
     self.crit_chance = self:GetAbility():GetSpecialValueFor("crit_chance")
     self.crit_damage = self:GetAbility():GetSpecialValueFor("crit_damage")
+    self.particleCrit = ParticleManager:CreateParticle( "particles/units/heroes/hero_dark_willow/dark_willow_bramble_steam_evil.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
+    ParticleManager:SetParticleControlEnt( self.particleCrit, 0, self:GetParent(), PATTACH_POINT_FOLLOW  , "attach_hitloc", self:GetParent():GetAbsOrigin(), true)
 end
 
 -------------------------------------------------------------------------------
@@ -42,3 +45,9 @@ function modifier_npc_aa_creep_wolf_small_crit_lua:GetModifierPreAttack_Critical
 end
 
 -----------------------------------------------------------------------------
+
+function modifier_npc_aa_creep_wolf_small_crit_lua:OnDestroy ( params )
+    ParticleManager:DestroyParticle(self.particleCrit,false)
+end
+
+-------------------------------------------------------------------------------
