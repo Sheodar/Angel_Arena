@@ -835,7 +835,7 @@
         "MaxLevel"                          "1"
 		"BaseClass"					        "ability_lua"
 		"AbilityTextureName"			    "custom/windwing_small_blink_lua"
-        "ScriptFile"					    "creeps/abilities/windwing_small_blink_lua"
+        "ScriptFile"					    "creeps/abilities/npc_aa_creep_windwing_small/windwing_small_blink_lua"
 
 
 		// Casting
@@ -872,7 +872,7 @@
         		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/windwing_small_aura_lua"
-        		"ScriptFile"					"creeps/abilities/windwing_small_aura_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_creep_windwing_small/windwing_small_aura_lua"
                 "MaxLevel"                      "1"
 
         		// Casting
@@ -975,7 +975,7 @@
                 //"AbilityUnitTargetTeam"		"DOTA_UNIT_TARGET_TEAM_ENEMY"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/creep_bear_big_clap_silence_lua"
-                "ScriptFile"					"creeps/abilities/creep_bear_big_clap_silence_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_clap_silence_lua"
                 "MaxLevel"
                                 "1"
                 // Casting
@@ -1017,7 +1017,7 @@
                 "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/creep_bear_big_passive_anticreep_lua"
-                "ScriptFile"					"creeps/abilities/creep_bear_big_passive_anticreep_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_passive_anticreep_lua"
                 "MaxLevel"                      "1"
 
                 // Special
@@ -1042,7 +1042,7 @@
             		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             		"BaseClass"					    "ability_lua"
             		"AbilityTextureName"			"custom/creep_bear_big_aura_lua"
-            		"ScriptFile"					"creeps/abilities/creep_bear_big_aura_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_creep_bear_big/creep_bear_big_aura_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1074,7 +1074,7 @@
                     "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
                     "BaseClass"					    "ability_lua"
                     "AbilityTextureName"			"custom/creep_bear_small_rage_lua"
-                    "ScriptFile"					"creeps/abilities/creep_bear_small_rage_lua"
+                    "ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_rage_lua"
                     "MaxLevel"                      "1"
 
                     // Special
@@ -1112,7 +1112,7 @@
             		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             		"BaseClass"					    "ability_lua"
             		"AbilityTextureName"			"custom/creep_bear_small_aura_lua"
-            		"ScriptFile"					"creeps/abilities/creep_bear_small_aura_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_aura_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1151,8 +1151,8 @@
             		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
             		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
             		"BaseClass"					    "ability_lua"
-                        "AbilityTextureName"			"custom/creep_bear_small_regen_lua"
-            		"ScriptFile"					"creeps/abilities/creep_bear_small_regen_lua"
+                    "AbilityTextureName"		"custom/creep_bear_small_regen_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_creep_bear_small/creep_bear_small_regen_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1169,43 +1169,6 @@
     	}
 
     	//=================================================================================================================
-    // Ability: creep_bear_small_rage_lua
-        //=================================================================================================================
-            "creep_bear_small_rage_lua"
-            {
-                // General
-                        //-------------------------------------------------------------------------------------------------------------
-                        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-                        "BaseClass"					    "ability_lua"
-                        "AbilityTextureName"			"custom/creep_bear_small_rage_lua"
-                        "ScriptFile"					"creeps/abilities/creep_bear_small_rage_lua"
-                        "MaxLevel"                      "1"
-
-                        // Special
-                        //-------------------------------------------------------------------------------------------------------------
-                        "AbilitySpecial"
-                        {
-                            "01"
-                            {
-                               "var_type"			    "FIELD_INTEGER"
-                               "rage_duration"		    "5"
-                            }
-
-                            "02"
-                            {
-                                "var_type"			    "FIELD_INTEGER"
-                                "bonus_attack_speed_pct"    "100"
-                            }
-                            "03"
-                            {
-                                "var_type"			    "FIELD_INTEGER"
-                                "bonus_resist_pct"    "65"
-                            }
-
-                        }
-            }
-
-        //=================================================================================================================
 // Ability: megacreep_warrior_rage_lua
         //=================================================================================================================
         "megacreep_warrior_rage_lua"
@@ -1215,7 +1178,7 @@
                     "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
                     "BaseClass"					    "ability_lua"
                     "AbilityTextureName"			"custom/megacreep_warrior_rage_lua"
-                    "ScriptFile"					"creeps/abilities/megacreep_warrior_rage_lua"
+                    "ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_rage_lua"
                     "MaxLevel"                      "1"
 
                     // Time
@@ -1252,7 +1215,7 @@
             		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
             		"BaseClass"					    "ability_lua"
                         "AbilityTextureName"			"custom/megacreep_warrior_aura_lua"
-            		"ScriptFile"					"creeps/abilities/megacreep_warrior_aura_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_aura_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1292,7 +1255,7 @@
             		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             		"BaseClass"					    "ability_lua"
                     "AbilityTextureName"			"custom/megacreep_warrior_sparta_lua"
-            		"ScriptFile"					"creeps/abilities/megacreep_warrior_passive_rage_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_megacreep_warrior/megacreep_warrior_passive_rage_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1313,7 +1276,7 @@
     	}
 
     	//=================================================================================================================
-// Ability: Deus Vult
+// Ability: windwing_small_heal_lua
 	//=================================================================================================================
 	"windwing_small_heal_lua"
 	{
@@ -1325,7 +1288,7 @@
         		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/windwing_small_heal_lua"
-        		"ScriptFile"					"creeps/abilities/windwing_small_heal_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_creep_windwing_small/windwing_small_heal_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1366,7 +1329,7 @@
         		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/megacreep_mage_dic_resist_lua"
-        		"ScriptFile"					"creeps/abilities/megacreep_mage_dic_resist_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_megacreep_mage/megacreep_mage_dic_resist_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1411,7 +1374,7 @@
         		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/megacreep_mage_sleep_lua"
-        		"ScriptFile"					"creeps/abilities/megacreep_mage_sleep_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_megacreep_mage/megacreep_mage_sleep_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1448,7 +1411,7 @@
                 "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/megacreep_mage_magic_damage_lua"
-                "ScriptFile"					"creeps/abilities/megacreep_mage_magic_damage_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_megacreep_mage/megacreep_mage_magic_damage_lua"
                 "MaxLevel"                      "1"
 
                 // Special
@@ -1479,7 +1442,7 @@
         		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/windwing_big_stun_lua"
-        		"ScriptFile"					"creeps/abilities/windwing_big_stun_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_creep_windwing_big/windwing_big_stun_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1522,7 +1485,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"BaseClass"					    "ability_lua"
 		"AbilityTextureName"			"custom/windwing_big_aura_lua"
-		"ScriptFile"					"creeps/abilities/windwing_big_aura_lua"
+		"ScriptFile"					"creeps/abilities/npc_aa_creep_windwing_big/windwing_big_aura_lua"
 		"MaxLevel"                      "1"
 
 
@@ -1556,7 +1519,7 @@
         		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/windwing_big_cyclone_lua"
-        		"ScriptFile"					"creeps/abilities/windwing_big_cyclone_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_creep_windwing_big/windwing_big_cyclone_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1596,7 +1559,7 @@
         		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
         		"BaseClass"					    "ability_lua"
         		"AbilityTextureName"			"custom/creep_mage_heal_lua"
-        		"ScriptFile"					"creeps/abilities/creep_mage_heal_lua"
+        		"ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_heal_lua"
         		"MaxLevel"                      "1"
 
         		// Casting
@@ -1635,7 +1598,7 @@
             		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
             		"BaseClass"					    "ability_lua"
                     "AbilityTextureName"			"custom/creep_mage_healing_aura_lua"
-            		"ScriptFile"					"creeps/abilities/creep_mage_healing_aura_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_healing_aura_lua"
                     "MaxLevel"                      "1"
 
             		// Special
@@ -1666,7 +1629,7 @@
             		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
             		"BaseClass"					    "ability_lua"
                     "AbilityTextureName"			"custom/creep_mage_multi_ball_lua"
-            		"ScriptFile"					"creeps/abilities/creep_mage_multi_ball_lua"
+            		"ScriptFile"					"creeps/abilities/npc_aa_creep_mage/creep_mage_multi_ball_lua"
                     "MaxLevel"                      "1"
 
         		// Time
@@ -1769,7 +1732,7 @@
                 "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/creep_warrior_alliance_damage_lua"
-                "ScriptFile"					"creeps/abilities/creep_warrior_alliance_damage_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_warrior/creep_warrior_alliance_damage_lua"
                 "MaxLevel"
                                 "1"
                 // Casting
@@ -1816,7 +1779,7 @@
                 "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/creep_warrior_hulk_lua"
-                "ScriptFile"					"creeps/abilities/creep_warrior_hulk_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_warrior/creep_warrior_hulk_lua"
                 "MaxLevel"
                                 "1"
                 // Casting
@@ -1865,7 +1828,7 @@
                 "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
                 "BaseClass"					    "ability_lua"
                 "AbilityTextureName"			"custom/creep_warrior_block_lua"
-                "ScriptFile"					"creeps/abilities/creep_warrior_block_lua"
+                "ScriptFile"					"creeps/abilities/npc_aa_creep_warrior/creep_warrior_block_lua"
                 "MaxLevel"
                                 "1"
                 // Casting
@@ -1908,7 +1871,7 @@
     	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
     	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
     	"AbilityTextureName"			"custom/u_texture"
-    	"ScriptFile"					"creeps/abilities/harpy_big_passive_manaregen.lua"
+    	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_big/harpy_big_passive_manaregen.lua"
 
     	"MaxLevel"						"1"
 
@@ -1934,7 +1897,7 @@
     	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
     	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
     	"AbilityTextureName"			"custom/u_texture"
-    	"ScriptFile"					"creeps/abilities/harpy_big_restore.lua"
+    	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_big/harpy_big_restore.lua"
 
     	"MaxLevel"						"1"
 
@@ -1959,7 +1922,7 @@
     		}
     	}
     }
-// Ability: harpy_big_restore
+// Ability: harpy_big_curse
     //=================================================================================================================
     "harpy_big_curse" // Активная: накладывает проклятье на врага, от которого враг получает на 25% больше урона, длительность 4 сек, кд 10 сек
     {
@@ -1971,7 +1934,7 @@
     	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
     	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
     	"AbilityTextureName"			"custom/u_texture"
-    	"ScriptFile"					"creeps/abilities/harpy_big_curse.lua"
+    	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_big/harpy_big_curse.lua"
 
     	"MaxLevel"						"1"
 
@@ -2014,7 +1977,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 	"AbilityTextureName"			"custom/u_texture"
-	"ScriptFile"					"creeps/abilities/harpy_small_dive.lua"
+	"ScriptFile"					"creeps/abilities/npc_aa_creep_harpy_small/harpy_small_dive.lua"
 
 	"MaxLevel"						"1"
 

@@ -15,7 +15,6 @@ end
 --------------------------------------------------------------------------------
 
 function modifier_megacreep_warrior_rage_lua:GetStatusEffectName()
-	--    return "particles/status_fx/status_effect_avatar.vpcf"
 	return "particles/status_fx/status_effect_life_stealer_rage.vpcf"
 end
 

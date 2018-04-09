@@ -1,6 +1,6 @@
 windwing_big_cyclone_lua = class({})
-LinkLuaModifier("modifier_windwing_big_cyclone_lua", "creeps/abilities/modifier_windwing_big_cyclone_lua", LUA_MODIFIER_MOTION_NONE )
-LinkLuaModifier("modifier_windwing_big_cyclone_dawn_lua", "creeps/abilities/modifier_windwing_big_cyclone_dawn_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_windwing_big_cyclone_lua", "creeps/abilities/npc_aa_creep_windwing_big/modifier_windwing_big_cyclone_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_windwing_big_cyclone_dawn_lua", "creeps/abilities/npc_aa_creep_windwing_big/modifier_windwing_big_cyclone_dawn_lua", LUA_MODIFIER_MOTION_NONE )
 
 
 function windwing_big_cyclone_lua:OnSpellStart()

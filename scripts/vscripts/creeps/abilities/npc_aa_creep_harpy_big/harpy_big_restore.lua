@@ -9,7 +9,6 @@ function harpy_big_restore:OnSpellStart()
     for i = 0, 2 do
         local particle = ParticleManager:CreateParticle("particles/econ/items/templar_assassin/templar_assassin_butterfly/templar_assassin_trap_explode_beam_butterfly.vpcf", PATTACH_CUSTOMORIGIN, nil )
         ParticleManager:SetParticleControl( particle, 0, target:GetOrigin() )
---        ParticleManager:SetParticleControl( particle, 1, target:GetOrigin() )
     end
 end
 

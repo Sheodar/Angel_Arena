@@ -1,5 +1,5 @@
 harpy_small_dive = class({})
-LinkLuaModifier( "modifier_harpy_small_dive_active", "creeps/abilities/modifier_harpy_small_dive_active", LUA_MODIFIER_MOTION_VERTICAL )
+LinkLuaModifier( "modifier_harpy_small_dive_active", "creeps/abilities/npc_aa_creep_harpy_small/modifier_harpy_small_dive_active", LUA_MODIFIER_MOTION_VERTICAL )
 
 --------------------------------------------------------------------------------
 

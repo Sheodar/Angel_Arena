@@ -1,5 +1,5 @@
 creep_warrior_alliance_damage_lua = class({})
-LinkLuaModifier("modifier_creep_warrior_alliance_damage_lua", "creeps/abilities/modifier_creep_warrior_alliance_damage_lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_creep_warrior_alliance_damage_lua", "creeps/abilities/npc_aa_creep_warrior/modifier_creep_warrior_alliance_damage_lua", LUA_MODIFIER_MOTION_NONE)
 
 --------------------------------------------------------------------------------
 function creep_warrior_alliance_damage_lua:OnSpellStart()

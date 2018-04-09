@@ -23,7 +23,6 @@ function modifier_windwing_big_cyclone_lua:OnCreated()
     self.target = self:GetParent();
     self.vPointTarget = self.target:GetAbsOrigin()
     self.particle = ParticleManager:CreateParticle( "particles/units/heroes/hero_brewmaster/brewmaster_cyclone.vpcf", PATTACH_CUSTOMORIGIN, self:GetCaster() )
---    self.particle = ParticleManager:CreateParticle( "particles/units/heroes/hero_obsidian_destroyer/obsidian_destroyer_prison_2.vpcf", PATTACH_CUSTOMORIGIN, self:GetCaster() )
     ParticleManager:SetParticleControl( self.particle, 0, self.vPointTarget )
 end
 
