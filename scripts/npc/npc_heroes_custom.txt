@@ -63,7 +63,7 @@
 	    //"DisableWearables" "1"
 
 	            "override_hero"    "npc_dota_hero_lina"
-		        "Ability1"         "npc_aa_creep_wolf_big_buff_damage_lua"
+		        "Ability1"         "npc_aa_creep_centaur_big_mage_resist_lua"
         		"Ability2"	       ""
         		"Ability3"	       ""
         		"Ability4"	       ""

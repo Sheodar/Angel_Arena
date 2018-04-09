@@ -25,8 +25,6 @@ end
 
 function modifier_npc_aa_creep_wolf_big_buff_damage_lua:OnCreated( kv )
     self.bonus_all_damage_pct = self:GetAbility():GetSpecialValueFor( "bonus_all_damage_pct" )
-    --self.particle1 = ParticleManager:CreateParticle( "particles/econ/items/wisp/wisp_overcharge_ti7.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
-    --ParticleManager:SetParticleControlEnt( self.particle1, 0, self:GetParent(), PATTACH_POINT_FOLLOW  , "attach_hitloc", self:GetParent():GetAbsOrigin(), true)
 end
 
 -------------------------------------------------------------------------------
@@ -34,7 +32,6 @@ end
 function modifier_npc_aa_creep_wolf_big_buff_damage_lua:OnRefresh( kv )
     self.bonus_all_damage_pct = self:GetAbility():GetSpecialValueFor( "bonus_all_damage_pct" )
 end
-
 
 --------------------------------------------------------------------------------
 function modifier_npc_aa_creep_wolf_big_buff_damage_lua:DeclareFunctions()
@@ -50,10 +47,3 @@ function modifier_npc_aa_creep_wolf_big_buff_damage_lua:GetModifierTotalDamageOu
 end
 
 --------------------------------------------------------------------------------
-
---function modifier_npc_aa_creep_wolf_big_buff_damage_lua:OnDestroy ( params )
-  --  ParticleManager:DestroyParticle(self.particle1,false)
---end
-
--------------------------------------------------------------------------------
-

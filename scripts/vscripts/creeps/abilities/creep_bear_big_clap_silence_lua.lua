@@ -1,5 +1,5 @@
 creep_bear_big_clap_silence_lua = class({})
-LinkLuaModifier("modifier_creep_bear_big_clap_silence_lua", "creeps/abilities/modifier_creep_bear_big_clap_silence_lua", LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_silence", "some_modifiers/modifier_silence.lua", LUA_MODIFIER_MOTION_NONE )
 
 function creep_bear_big_clap_silence_lua:OnSpellStart()
         local radius = self:GetSpecialValueFor( "radius" )
@@ -11,7 +11,7 @@ function creep_bear_big_clap_silence_lua:OnSpellStart()
         if #enemies > 0 then
             for _,enemy in pairs(enemies) do
                 if enemy ~= nil and ( not enemy:IsMagicImmune() ) and ( not enemy:IsInvulnerable() ) then
-                    enemy:AddNewModifier( self:GetCaster(), self, "modifier_creep_bear_big_clap_silence_lua", { duration = durability } )
+                    enemy:AddNewModifier( self:GetCaster(), self, "modifier_silence.lua", { duration = durability } )
                 end
             end
         end
