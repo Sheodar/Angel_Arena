@@ -1,4 +1,4 @@
-require('timers')
+require('lib/timers')
 
 -- Generated from template
 
