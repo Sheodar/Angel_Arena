@@ -7,14 +7,13 @@ function windwing_big_stun_lua:OnSpellStart()
 
 
     local info = {
-        EffectName = "particles/neutral_fx/creep_mage_multi_ball.vpcf",
+        EffectName = "particles/neutral_fx/mud_golem_hurl_boulder.vpcf",
         Ability = self,
         iMoveSpeed = 600,
         Source = self:GetCaster(),
         Target = self:GetCursorTarget(),
         iVisionTeamNumber = self:GetCaster():GetTeamNumber(),
     }
-
     ProjectileManager:CreateTrackingProjectile(info)
 end
 
