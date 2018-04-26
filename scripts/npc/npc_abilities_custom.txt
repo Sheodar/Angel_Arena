@@ -2649,7 +2649,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"regen_hp"		    "30"
+				"regen_hp"		    "10"
 		    }
 		}
 	}
@@ -2821,7 +2821,76 @@
 	}
     //=================================================================================================================
 
+// Ability: rebels_disarmor_lua
+    	//=================================================================================================================
+    	"rebels_disarmor_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            		"BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/u_texture"
+            		"ScriptFile"					"items/rebel/rebels_disarmor_lua"
+                    "MaxLevel"                      "1"
 
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+            			"01"
+            			{
+                           "var_type"			    "FIELD_INTEGER"
+                           "duration"		        "5"
+                        }
+                        "02"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "cooldown"           	"0.5"
+                        }
+                        "03"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "disarmor_per_hit_const" "4"
+                        }
+                        "04"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "disarmor_per_hit_pct"   "14"
+                        }
+                        "05"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "max_disarmor_pct"       "100"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
+// Ability: azrael_lua
+    	//=================================================================================================================
+    	"azrael_lua"
+    	{
+    		// General
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+            		"BaseClass"					    "ability_lua"
+                    "AbilityTextureName"			"custom/u_texture"
+            		"ScriptFile"					"items/azrael/azrael_lua"
+                    "MaxLevel"                      "1"
+
+            		// Special
+            		//-------------------------------------------------------------------------------------------------------------
+            		"AbilitySpecial"
+            		{
+                        "01"
+                        {
+                           "var_type"			    "FIELD_FLOAT"
+                           "cooldown"           	"0.7"
+                        }
+            		}
+    	}
+
+    	//=================================================================================================================
 
 
 
