@@ -2887,6 +2887,11 @@
                            "var_type"			    "FIELD_FLOAT"
                            "cooldown"           	"0.7"
                         }
+                        "01"
+                        {
+                           "var_type"			    "FIELD_INTEGER"
+                           "number_of_attacks"      "1"
+                        }
             		}
     	}
 
